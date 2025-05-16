@@ -1,16 +1,20 @@
-const checkOddEven = () => {
-  let num = 0;
+
+// This program checks if a number is odd or even 
+// Recommended
+let num = 0;
+
+const checkOddEven = (num) => {
+  num = num % 2;
+  return num;
+}
 
   while(true) {
-    num = prompt("Enter a number: ")
+    num = prompt("Enter a number: ");
     
-    if(num % 2 == 0){
-      alert("Your number is even number");
-    }
-    else if (num % 2 == 1) {
+    if(checkOddEven(num)){
       alert("Your number is odd number");
     } else {
-      prompt("Out of range");
+      alert("Your number is even number");
     }
     
     let again = prompt("Enter again? (yes|no)");
@@ -18,6 +22,7 @@ const checkOddEven = () => {
       break;
     }
   }
-}
 
 checkOddEven();
+
+console.log(`My last entered number: ${num}`);
